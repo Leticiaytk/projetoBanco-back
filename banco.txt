@@ -1,0 +1,24 @@
+Cria tabela Cliente
+connection.query(
+  `create table cliente (cpf varchar(11), client_name varchar(50), client_mail varchar(50), client_password varchar(20), client_cep varchar(9), client_adress varchar(50), client_number varchar(10), client_bairro varchar(50) )`
+);
+
+Cria tabela item do pedido
+connection.query(
+  `create table item_pedido(cod_pedido int (5), id_produto varchar(10), qtd_pedido int(3))`
+);
+
+Cria tabela Pedido
+connection.query(
+  `create table pedido(order_id int(3), order_delivery int(2), cpf varchar(11), market_id int(5))`
+);
+
+Cria tabela Produto
+connection.query(
+  `create table produto( product_id varchar(10), product_name varchar(50), product_description varchar(140), produt_category varchar(20), product_price float(5,2), product_marca varchar(50), product_heigth varchar(10), product_qnt int(5), market_id int(5))`
+);
+
+Cria tabela Mercado
+connection.query(
+  `create table mercado(market_id int(5), market_name varchar(50), market_mail varchar(50), market_password varchar(50), market_description varchar(140), market_phone varchar(20), delivery int(1), market_cep varchar(9), market_adress varchar(50), market_number varchar(10), market_bairro varchar(50))`
+);
